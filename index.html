@@ -41,23 +41,43 @@
                 <div class="mb-8">
                     <h1 class="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">PartneX</h1>
                 </div>
-                <img src="https://placehold.co/1200x500/111827/38bdf8?text=Яркое+изображение+цифрового+моста" alt="Цифровой мост между Азией и Европой" class="rounded-lg shadow-2xl my-8 object-cover w-full max-w-4xl">
+                <div class="my-8 w-full max-w-4xl">
+                    <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                        <defs>
+                            <linearGradient id="gradAsia" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#374151;stop-opacity:1" /><stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" /></linearGradient>
+                            <linearGradient id="gradEurope" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" /><stop offset="100%" style="stop-color:#374151;stop-opacity:1" /></linearGradient>
+                            <linearGradient id="gradBridge" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#60a5fa" /><stop offset="100%" stop-color="#34d399" /></linearGradient>
+                        </defs>
+                        <path d="M0 150 C 50 120, 150 120, 200 150 L 200 250 L 0 250 Z" fill="url(#gradAsia)"/>
+                        <path d="M600 150 C 650 120, 750 120, 800 150 L 800 250 L 600 250 Z" fill="url(#gradEurope)"/>
+                        <path d="M200 150 C 350 50, 450 50, 600 150" stroke="url(#gradBridge)" stroke-width="10" fill="none" stroke-linecap="round"/>
+                        <path d="M210 160 C 350 70, 450 70, 590 160" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round" stroke-dasharray="5 10" opacity="0.3"/>
+                        <text x="100" y="200" font-family="Inter, sans-serif" font-size="24" fill="white" text-anchor="middle">АЗИЯ</text>
+                        <text x="700" y="200" font-family="Inter, sans-serif" font-size="24" fill="white" text-anchor="middle">ЕВРОПА</text>
+                    </svg>
+                </div>
                 <p class="text-2xl md:text-3xl font-light text-gray-300 mt-4">Строим цифровой мост между Азией и Европой.</p>
                 <p class="text-lg md:text-xl text-gray-400 mt-2">Отраслевое облако для новой эры глобального производства и торговли.</p>
             </div>
 
             <!-- Slide 2: Парадокс XXI века -->
-            <div class="slide" data-notes="«Мы живем в мире парадоксов. Мы разрабатываем компоненты с нанометровой точностью, но находим партнеров для их производства, пролетая 10 000 километров, чтобы обменяться бумажными карточками на выставке. Это не просто странно, это опасно неэффективно».">
+            <div class="slide flex-col justify-center items-center" data-notes="«Мы живем в мире парадоксов. Мы разрабатываем компоненты с нанометровой точностью, но находим партнеров для их производства, пролетая 10 000 километров, чтобы обменяться бумажными карточками на выставке. Это не просто странно, это опасно неэффективно».">
                 <div class="w-full text-center">
                     <h2 class="text-4xl md:text-5xl font-bold mb-8">Мы создаем чудеса 21-го века с помощью инструментов 20-го века.</h2>
                     <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
-                        <div class="md:w-1/2 text-center">
-                             <img src="https://placehold.co/600x400/111827/FFFFFF?text=Сложное+изображение+спутника" alt="Спутник" class="rounded-lg shadow-lg mx-auto">
-                             <p class="mt-2 text-gray-400">Сложность 21-го века</p>
+                        <div class="md:w-1/2 text-center p-6 bg-gray-800 rounded-lg">
+                             <div class="w-full h-[300px] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 01-9-9 9 9 0 019-9m9 9a9 9 0 01-9 9" /></svg>
+                             </div>
+                             <p class="mt-2 text-lg font-semibold">Сложность 21-го века</p>
                         </div>
-                        <div class="md:w-1/2 text-center">
-                             <img src="https://placehold.co/600x400/111827/FFFFFF?text=Хаос+из+писем,+таблиц+и+визиток" alt="Хаос" class="rounded-lg shadow-lg mx-auto">
-                             <p class="mt-2 text-gray-400">Инструменты 20-го века</p>
+                        <div class="md:w-1/2 text-center p-6 bg-gray-800 rounded-lg">
+                             <div class="w-full h-[300px] flex items-center justify-center relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-red-400 absolute rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-red-300 absolute -rotate-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-red-200 absolute rotate-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+                             </div>
+                             <p class="mt-2 text-lg font-semibold">Инструменты 20-го века</p>
                         </div>
                     </div>
                     <p class="text-2xl mt-12 p-4 bg-gray-800 rounded-lg inline-block"><strong>70%</strong> компаний используют <strong>электронную почту</strong>, а <strong>52% — таблицы</strong> для управления многомиллионными закупками.</p>
@@ -68,7 +88,21 @@
             <div class="slide items-center justify-center" data-notes="«Этот разрыв — не мелкое неудобство; это системный налог, который мы платим задержками в инновациях, раздутыми затратами и неприемлемым риском. Среднее время на поиск одного квалифицированного поставщика и размещение заказа составляет от 3 до 10 недель. Это и есть ключевая проблема, которую мы решаем».">
                  <div class="w-full text-center">
                     <h2 class="text-4xl md:text-5xl font-bold mb-8 text-red-400">Этот разрыв налагает многомиллиардный «Налог на неэффективность» на мировую экономику.</h2>
-                    <img src="https://placehold.co/800x300/111827/ef4444?text=Анимация+вычитания+денег+из+ценника" alt="Налог на неэффективность" class="rounded-lg shadow-lg mx-auto mb-8">
+                     <div class="my-8 w-full max-w-3xl flex justify-center items-center h-48 bg-gray-800/50 rounded-lg p-4 relative">
+                        <span class="text-4xl md:text-6xl font-bold px-6 py-3 bg-gray-700 rounded-lg border-2 border-dashed border-gray-500 z-10">€1,000,000</span>
+                        <div class="absolute top-1/2 -left-12 -translate-y-1/2 flex items-center gap-2">
+                             <svg class="w-16 h-16 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+                             <div class="text-center p-2 rounded-lg bg-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-xs">Время</span></div>
+                        </div>
+                        <div class="absolute -top-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+                             <svg class="w-16 h-16 text-red-400 rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+                             <div class="text-center p-2 rounded-lg bg-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg><span class="text-xs">Запасы</span></div>
+                        </div>
+                        <div class="absolute top-1/2 -right-12 -translate-y-1/2 flex items-center gap-2">
+                             <div class="text-center p-2 rounded-lg bg-gray-800"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg><span class="text-xs">Упущенные<br>возможности</span></div>
+                             <svg class="w-16 h-16 text-red-400 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+                        </div>
+                    </div>
                     <div class="flex justify-around items-center gap-8 mt-8 text-xl">
                         <div class="p-6 bg-gray-800 rounded-lg">
                             <p class="text-5xl font-bold text-blue-400">3-10</p>
@@ -86,8 +120,13 @@
 
             <!-- Slide 4: История г-на Чена -->
             <div class="slide items-center gap-8" data-notes="«Этот налог не абстрактен; у него есть человеческая цена. С одной стороны, у нас есть блестящие производители, как г-н Чен. Он управляет первоклассным цехом ЧПУ на Тайване. Чтобы найти клиентов в Германии, он вынужден играть в лотерею на выставках, тратя 38 000 евро на то, что часто сводится к одному небольшому заказу. Это безумная стоимость привлечения клиента, но это единственная доступная игра».">
-                <div class="w-1/2">
-                    <img src="https://placehold.co/600x700/111827/FFFFFF?text=Г-н+Чен,+владелец+цеха+ЧПУ+(Тайвань)" alt="Г-н Чен" class="rounded-lg shadow-2xl object-cover h-full">
+                <div class="w-1/2 h-[700px] bg-gray-800 rounded-lg flex flex-col items-center justify-center p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 14a5.986 5.986 0 004.546-1.084A5 5 0 0010 11z" clip-rule="evenodd" /></svg>
+                    <p class="mt-4 text-2xl text-gray-300">Владелец цеха ЧПУ</p>
+                    <div class="mt-8 p-4 border-2 border-red-500 rounded-lg text-center">
+                        <p class="text-lg">Стопка визиток и калькулятор</p>
+                        <p class="text-4xl font-bold text-red-400 mt-2">-€38,000</p>
+                    </div>
                 </div>
                 <div class="w-1/2 space-y-4">
                     <h2 class="text-4xl font-bold">Знакомьтесь, г-н Чен (Тайвань)</h2>
@@ -103,8 +142,13 @@
 
             <!-- Slide 5: История Клауса -->
             <div class="slide items-center gap-8" data-notes="«С другой стороны, у нас есть менеджеры по закупкам, как Клаус в Штутгарте. Ему нужно найти нового поставщика в Азии, чтобы оставаться конкурентоспособным. Его текущие варианты — это кошмар. Alibaba — это хаос. Агенты по закупкам забирают 15% от каждого заказа. И г-н Чен, и Клаус проигрывают. Система подводит всех».">
-                <div class="w-1/2">
-                    <img src="https://placehold.co/600x700/111827/FFFFFF?text=Клаус,+менеджер+по+закупкам+(Германия)" alt="Клаус" class="rounded-lg shadow-2xl object-cover h-full">
+                 <div class="w-1/2 h-[700px] bg-gray-800 rounded-lg flex flex-col items-center justify-center p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 14a5.986 5.986 0 004.546-1.084A5 5 0 0010 11z" clip-rule="evenodd" /></svg>
+                    <p class="mt-4 text-2xl text-gray-300">Менеджер по закупкам</p>
+                    <div class="mt-8 p-4 border-2 border-yellow-500 rounded-lg text-center w-full">
+                        <p class="text-lg">Уставший вид, 20 вкладок в браузере</p>
+                        <div class="flex space-x-2 mt-4 text-xs overflow-hidden"><span class="bg-gray-700 p-1 rounded">Alibaba</span><span class="bg-gray-700 p-1 rounded">Google</span><span class="bg-gray-700 p-1 rounded">Maps</span><span class="bg-gray-700 p-1 rounded">...</span><span class="bg-gray-700 p-1 rounded">...</span></div>
+                    </div>
                 </div>
                 <div class="w-1/2 space-y-4">
                     <h2 class="text-4xl font-bold">Знакомьтесь, Клаус (Германия)</h2>
@@ -121,22 +165,10 @@
             <div class="slide flex-col justify-center items-center" data-notes="«Существующие решения не просто неэффективны; они фундаментально не соответствуют потребностям высокоточного производства. Рынок не просто недостаточно обслуживается; ему активно вредят доступные варианты».">
                 <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Провал рынка: Четыре всадника неэффективности</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
-                    <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-2">Выставки</h3>
-                        <p class="text-gray-400">Огромные затраты, минимальный ROI. 4 дня надежды, 361 день тишины.</p>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-2">Маркетплейсы (Alibaba)</h3>
-                        <p class="text-gray-400">Гонка на понижение цены, а не поиск качества. 80% запросов от других посредников.</p>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-2">Агенты по закупкам</h3>
-                        <p class="text-gray-400">Дорогой «черный ящик». Вы не владеете отношениями, ими владеет агент.</p>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-2">Культурные барьеры</h3>
-                        <p class="text-gray-400">Непонимание требований ЕС (CE, REACH) и бизнес-этикета.</p>
-                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg><h3 class="text-2xl font-bold mb-2">Выставки</h3><p class="text-gray-400">Огромные затраты, минимальный ROI. 4 дня надежды, 361 день тишины.</p></div>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg><h3 class="text-2xl font-bold mb-2">Маркетплейсы</h3><p class="text-gray-400">Гонка на понижение цены, а не поиск качества. 80% запросов от других посредников.</p></div>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg><h3 class="text-2xl font-bold mb-2">Агенты по закупкам</h3><p class="text-gray-400">Дорогой «черный ящик». Вы не владеете отношениями, ими владеет агент.</p></div>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-red-500/50 shadow-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><h3 class="text-2xl font-bold mb-2">Культурные барьеры</h3><p class="text-gray-400">Непонимание требований ЕС (CE, REACH) и бизнес-этикета.</p></div>
                 </div>
             </div>
 
@@ -144,7 +176,7 @@
             <div class="slide flex-col justify-center items-center" data-notes="«Великой идеи недостаточно. Ей нужен мощный попутный ветер. Мы находимся в эпицентре идеального шторма. Стратегия «Китай плюс один» — это уже не теория; это операционный мандат. Компании должны диверсифицироваться, и они должны сделать это сейчас».">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">Тектонический сдвиг: Императив «Китай плюс один»</h2>
                 <p class="text-xl text-gray-400 mb-8">Мир изменился. Это не тренд; это необратимый сдвиг.</p>
-                <img src="https://placehold.co/1200x400/111827/34d399?text=Карта+мира:+смещение+цепочек+поставок+из+Китая+в+ЮВА" alt="Карта мира" class="rounded-lg shadow-2xl w-full max-w-5xl mb-8">
+                <div class="w-full max-w-5xl p-4 bg-gray-800/50 rounded-lg"><svg class="w-full" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><path d="M 10,20 L 30,20" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2 2" /><circle cx="35" cy="20" r="4" fill="#ef4444" /><path d="M 39,20 C 50,10 60,10 70,20 L 85,20" stroke="#34d399" stroke-width="2" fill="none" /><path d="M 39,20 C 50,30 60,30 70,20" stroke="#34d399" stroke-width="2" fill="none" /><circle cx="90" cy="20" r="4" fill="#60a5fa" /><text x="35" y="10" font-size="4" fill="white" text-anchor="middle">Китай</text><text x="60" y="35" font-size="4" fill="white" text-anchor="middle">ЮВА</text><text x="90" y="10" font-size="4" fill="white" text-anchor="middle">DACH</text></svg></div>
                 <div class="flex justify-around items-center gap-8 mt-4 text-xl w-full max-w-5xl">
                     <div class="p-6 bg-gray-800 rounded-lg text-center">
                         <p class="text-5xl font-bold text-green-400">67%</p>
@@ -186,7 +218,13 @@
              <div class="slide flex-col justify-center items-center text-center" data-notes="«Наше решение — это не очередной маркетплейс. Мы следуем проверенной стратегии единорогов, создавая «Отраслевое облако» для новой эры производства. Это операционная система, которая заменяет хаос ясностью, риск — доверием, а трение — скоростью».">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Мы не строим очередной каталог.</h2>
                 <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">Мы строим «Отраслевое облако» для производства.</h2>
-                <img src="https://placehold.co/1000x350/111827/FFFFFF?text=Схема+PartneX+Industry+Cloud" alt="Схема PartneX" class="rounded-lg shadow-2xl w-full max-w-4xl my-8">
+                <div class="my-8 w-full max-w-4xl bg-gray-800/50 p-8 rounded-lg relative flex justify-center items-center h-64">
+                    <div class="absolute w-40 h-40 rounded-full bg-blue-500 flex items-center justify-center text-center"><span class="text-3xl font-bold">PartneX</span></div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"><div class="p-3 bg-gray-800 rounded-full mb-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></div><p>Подбор ИИ</p></div>
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 text-center"><div class="p-3 bg-gray-800 rounded-full mb-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><p>Доверие</p></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 text-center"><div class="p-3 bg-gray-800 rounded-full mb-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><p>Нормы ЕС</p></div>
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center"><div class="p-3 bg-gray-800 rounded-full mb-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg></div><p>Совместная<br>работа</p></div>
+                </div>
                 <div class="flex justify-around w-full max-w-4xl text-xl mt-4">
                     <p><strong class="text-blue-400">Veeva</strong> для фармацевтики.</p>
                     <p><strong class="text-blue-400">Knowde</strong> для химии.</p>
@@ -205,8 +243,8 @@
                         <li class="bg-gray-800 p-4 rounded-lg"><strong>Результат:</strong> Идеальный, предварительно проверенный партнер за один клик.</li>
                     </ul>
                 </div>
-                <div class="w-1/2">
-                     <img src="https://placehold.co/600x500/111827/38bdf8?text=Анимация+подбора+поставщиков" alt="AI Matching" class="rounded-lg shadow-2xl">
+                <div class="w-1/2 h-[500px] flex items-center justify-center bg-gray-800/50 rounded-lg p-8">
+                    <svg viewBox="0 0 100 80" class="w-full"><path d="M 10,10 L 40,10 L 40,70 L 10,70 Z" fill="#1f2937" /><text x="25" y="18" font-size="3" fill="white" text-anchor="middle">Требования</text><text x="15" y="30" font-size="2" fill="gray">±0.001мм</text><text x="15" y="35" font-size="2" fill="gray">Inconel</text><path d="M 40,40 L 60,40" stroke="white" stroke-width="1" stroke-dasharray="2 2" /><text x="50" y="38" font-size="3" fill="white" text-anchor="middle">AI</text><path d="M 60,20 L 90,20 L 90,35 L 60,35 Z" fill="#10b981" /><text x="75" y="28" font-size="3" fill="white" text-anchor="middle">Партнер 1</text><path d="M 60,45 L 90,45 L 90,60 L 60,60 Z" fill="#374151" /><text x="75" y="53" font-size="3" fill="white" text-anchor="middle">Партнер 2</text></svg>
                 </div>
             </div>
 
@@ -217,27 +255,9 @@
                     <p class="text-3xl my-6 text-gray-300">Больше никаких догадок. Только проверенные данные.</p>
                 </div>
                 <div class="w-1/2 space-y-4">
-                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-gray-700">
-                        <div class="text-3xl font-bold text-blue-400 bg-gray-700 px-4 py-2 rounded">1</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Уровень 1 (Базовый)</h3>
-                            <p class="text-gray-400">Проверка регистрации компании.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-blue-500/50">
-                        <div class="text-3xl font-bold text-blue-400 bg-gray-700 px-4 py-2 rounded">2</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Уровень 2 (Проверенный)</h3>
-                            <p class="text-gray-400">Видео-интервью и проверка документов.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-green-500/50">
-                        <div class="text-3xl font-bold text-green-400 bg-gray-700 px-4 py-2 rounded">3</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Уровень 3 (Сертифицированный)</h3>
-                            <p class="text-gray-400">Аудит на месте от третьей стороны (TÜV, SGS) и проверка отзывов клиентов.</p>
-                        </div>
-                    </div>
+                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-gray-700"><div class="p-3 bg-gray-700 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><div><h3 class="text-xl font-bold">Уровень 1 (Базовый)</h3><p class="text-gray-400">Проверка регистрации компании.</p></div></div>
+                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-blue-500/50"><div class="p-3 bg-gray-700 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><div><h3 class="text-xl font-bold">Уровень 2 (Проверенный)</h3><p class="text-gray-400">Видео-интервью и проверка документов.</p></div></div>
+                     <div class="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-green-500/50"><div class="p-3 bg-gray-700 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><div><h3 class="text-xl font-bold">Уровень 3 (Сертифицированный)</h3><p class="text-gray-400">Аудит на месте от третьей стороны (TÜV, SGS) и проверка отзывов клиентов.</p></div></div>
                 </div>
             </div>
 
@@ -252,15 +272,18 @@
                         <li class="bg-gray-800 p-4 rounded-lg"><strong>Партнерская сеть</strong> со скидками на тестирование и сертификацию.</li>
                     </ul>
                 </div>
-                <div class="w-1/2">
-                     <img src="https://placehold.co/600x500/111827/38bdf8?text=Сложные+регуляции+->+Простой+чек-лист" alt="Compliance Center" class="rounded-lg shadow-2xl">
+                <div class="w-1/2 h-[500px] flex items-center justify-center bg-gray-800/50 rounded-lg p-8">
+                    <svg viewBox="0 0 100 80" class="w-full"><path d="M 10,10 C 15,25 25,5 30,20 C 35,35 45,15 50,30" stroke="#f87171" stroke-width="1.5" fill="none" /><path d="M 55,20 L 90,20" stroke="white" stroke-width="1.5" /><path d="M 55,30 L 90,30" stroke="white" stroke-width="1.5" /><path d="M 55,40 L 90,40" stroke="white" stroke-width="1.5" /><text x="30" y="50" font-size="4" fill="white" text-anchor="middle">CE, REACH, RoHS</text><text x="72" y="50" font-size="4" fill="white" text-anchor="middle">Простой чек-лист</text></svg>
                 </div>
             </div>
             
             <!-- Slide 13: Столп 4: Движок для совместной работы -->
             <div class="slide items-center gap-8" data-notes="«Мы напрямую атакуем 3-10-недельные сроки RFQ, заменяя хаос структурированным цифровым рабочим процессом. Это создает единый, аудируемый канал для всех коммуникаций».">
-                <div class="w-1/2">
-                     <img src="https://placehold.co/600x500/111827/38bdf8?text=Хаос+(Gmail,+Excel)+->+Дашборд+PartneX" alt="Collaboration Hub" class="rounded-lg shadow-2xl">
+                <div class="w-1/2 h-[500px] flex items-center justify-center bg-gray-800/50 rounded-lg p-8 relative">
+                    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
+                    <div class="absolute top-1/3 right-1/4 translate-x-1/2 -translate-y-1/2"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
+                    <div class="absolute bottom-1/4 left-1/3 -translate-x-1/2 translate-y-1/2"><svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2m8-2H5a2 2 0 00-2 2v10a2 2 0 002 2h11l4 4V4a2 2 0 00-2-2z" /></svg></div>
+                    <div class="w-48 h-32 bg-blue-500 rounded-lg flex items-center justify-center text-center p-4 z-10 shadow-2xl"><span class="text-xl font-bold">Дашборд PartneX</span></div>
                 </div>
                  <div class="w-1/2">
                     <h2 class="text-4xl font-bold">Столп 4: Движок для совместной работы</h2>
@@ -276,7 +299,7 @@
             <!-- Slide 14: Магия: Наше нечестное преимущество -->
             <div class="slide flex-col items-center justify-center text-center" data-notes="«Так как же мы победим? У нас есть секретное оружие. В то время как традиционная SaaS-компания сдает свое ПО в аренду, мы даем нашим пользователям путь к владению. Наша платформа построена на Протоколе доверия PartneX».">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">У нас не просто клиенты. <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">Мы создаем владельцев.</span></h2>
-                <img src="https://placehold.co/1000x350/111827/a855f7?text=Маховик+с+токеном+$PRTNX" alt="Маховик токена" class="rounded-lg shadow-2xl w-full max-w-4xl my-8">
+                <div class="my-8 w-full max-w-4xl"><svg viewBox="0 0 100 50" class="w-full"><circle cx="50" cy="25" r="15" fill="#a855f7" opacity="0.2" /><circle cx="50" cy="25" r="10" fill="#a855f7" /><text x="50" y="26.5" font-size="4" fill="white" text-anchor="middle">$PRTNX</text><path id="circlePath" d="M 20,25 A 30 30 0 1 1 80,25" fill="none" /><text font-size="3" fill="gray"><textPath href="#circlePath" startOffset="50%" text-anchor="middle">Пользователи платят комиссию -> Зарабатывают токены -> Ценность растет -> Пользователи евангелисты -> </textPath></text></svg></div>
                 <p class="text-xl max-w-4xl"><strong>Протокол доверия ($PRTNX):</strong> Наш токен — это не уловка. Это двигатель нашего самого глубокого конкурентного рва.</p>
                 <p class="text-2xl mt-6 p-4 bg-gray-800 rounded-lg inline-block"><strong>Результат:</strong> Самоуправляемое сообщество, где каждый заинтересован в успехе. Это сетевой эффект, который не сможет скопировать ни один Web2-конкурент.</p>
             </div>
@@ -285,18 +308,9 @@
             <div class="slide flex-col items-center justify-center" data-notes="«Дело не в спекуляциях; дело в согласовании стимулов. Поставщики вносят токены в качестве гарантии качества. Платежи заблокированы в эскроу. А по мере роста платформы растет и стоимость токена, и наши пользователи — наши владельцы — становятся нашими самыми страстными евангелистами. Это наше нечестное преимущество».">
                 <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Протокол доверия в действии</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-                    <div class="bg-gray-800 p-6 rounded-lg text-center">
-                        <h3 class="text-2xl font-bold mb-2 text-purple-400">1. Стейкинг для качества</h3>
-                        <p class="text-gray-300">Поставщики вносят токены в качестве гарантии исполнения. Качество растет, риск снижается.</p>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg text-center">
-                        <h3 class="text-2xl font-bold mb-2 text-purple-400">2. Эскроу на смарт-контрактах</h3>
-                        <p class="text-gray-300">Платежи надежно хранятся и высвобождаются автоматически по ключевым этапам. Больше никакого риска контрагента.</p>
-                    </div>
-                     <div class="bg-gray-800 p-6 rounded-lg text-center">
-                        <h3 class="text-2xl font-bold mb-2 text-purple-400">3. Вознаграждения за данные</h3>
-                        <p class="text-gray-300">Пользователи получают токены за предоставление ценных данных, что делает нашу платформу умнее с каждым днем.</p>
-                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg><h3 class="text-2xl font-bold mb-2 text-purple-400">1. Стейкинг для качества</h3><p class="text-gray-300">Поставщики вносят токены в качестве гарантии исполнения. Качество растет, риск снижается.</p></div>
+                     <div class="bg-gray-800 p-6 rounded-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg><h3 class="text-2xl font-bold mb-2 text-purple-400">2. Эскроу на смарт-контрактах</h3><p class="text-gray-300">Платежи надежно хранятся и высвобождаются автоматически по ключевым этапам. Больше никакого риска контрагента.</p></div>
+                     <div class="bg-gray-800 p-6 rounded-lg text-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg><h3 class="text-2xl font-bold mb-2 text-purple-400">3. Вознаграждения за данные</h3><p class="text-gray-300">Пользователи получают токены за предоставление ценных данных, что делает нашу платформу умнее с каждым днем.</p></div>
                 </div>
             </div>
 
@@ -363,8 +377,8 @@
                         <li class="bg-gray-800 p-4 rounded-lg"><strong>Ключевое партнерство (Тяга):</strong> Эксклюзивное партнерство с VDW (Ассоциация немецких станкостроителей) дает нам немедленный доступ к 150 компаниям-членам — нашим идеальным покупателям.</li>
                     </ul>
                 </div>
-                 <div class="w-1/2">
-                     <img src="https://placehold.co/600x500/111827/38bdf8?text=Карта+Европы+с+выделенным+DACH" alt="Карта DACH" class="rounded-lg shadow-2xl">
+                 <div class="w-1/2 h-[500px] flex items-center justify-center bg-gray-800/50 rounded-lg p-8">
+                    <svg viewBox="0 0 100 100" class="w-full"><path d="M 50,10 L 90,50 L 50,90 L 10,50 Z" fill="#374151" /><path d="M 45,25 L 75,50 L 45,75 Z" fill="#60a5fa" /><text x="50" y="55" font-size="8" fill="white" text-anchor="middle">DACH</text></svg>
                 </div>
             </div>
 
@@ -411,12 +425,12 @@
                  <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Правильная команда для монументальной задачи</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mb-8">
                      <div class="bg-gray-800 p-6 rounded-lg text-center">
-                        <img src="https://placehold.co/150x150/1f2937/FFFFFF?text=Фото" class="rounded-full mx-auto mb-4">
+                        <svg class="h-24 w-24 rounded-full mx-auto mb-4 bg-gray-700 text-gray-400 p-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 14a5.986 5.986 0 004.546-1.084A5 5 0 0010 11z" clip-rule="evenodd" /></svg>
                         <h3 class="text-2xl font-bold">[Имя основателя 1]</h3>
                         <p class="text-blue-400">CEO</p>
                      </div>
                      <div class="bg-gray-800 p-6 rounded-lg text-center">
-                        <img src="https://placehold.co/150x150/1f2937/FFFFFF?text=Фото" class="rounded-full mx-auto mb-4">
+                        <svg class="h-24 w-24 rounded-full mx-auto mb-4 bg-gray-700 text-gray-400 p-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 14a5.986 5.986 0 004.546-1.084A5 5 0 0010 11z" clip-rule="evenodd" /></svg>
                         <h3 class="text-2xl font-bold">[Имя основателя 2]</h3>
                         <p class="text-blue-400">CTO</p>
                         <p class="text-gray-400 mt-2">Руководил разработкой блокчейн-протокола в [Крипто-компания], эксперт в архитектуре смарт-контрактов и токеномике.</p>
@@ -466,7 +480,21 @@
 
             <!-- Slide 23: Видение -->
             <div class="slide flex-col justify-center items-center text-center" data-notes="«Решения и инвестиции, сделанные в следующие 18 месяцев, определят победителей на следующие 20 лет. Инвестиция в PartneX — это не ставка на программное обеспечение. Это шанс владеть фундаментальной частью новой инфраструктуры глобальной торговли. Спасибо».">
-                <img src="https://placehold.co/1200x500/111827/38bdf8?text=Яркое+изображение+цифрового+моста" alt="Цифровой мост между Азией и Европой" class="rounded-lg shadow-2xl my-8 object-cover w-full max-w-4xl">
+                <div class="my-8 w-full max-w-4xl">
+                     <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                        <defs>
+                            <linearGradient id="gradAsia2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#374151;stop-opacity:1" /><stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" /></linearGradient>
+                            <linearGradient id="gradEurope2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" /><stop offset="100%" style="stop-color:#374151;stop-opacity:1" /></linearGradient>
+                            <linearGradient id="gradBridge2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#60a5fa" /><stop offset="100%" stop-color="#34d399" /></linearGradient>
+                        </defs>
+                        <path d="M0 150 C 50 120, 150 120, 200 150 L 200 250 L 0 250 Z" fill="url(#gradAsia2)"/>
+                        <path d="M600 150 C 650 120, 750 120, 800 150 L 800 250 L 600 250 Z" fill="url(#gradEurope2)"/>
+                        <path d="M200 150 C 350 50, 450 50, 600 150" stroke="url(#gradBridge2)" stroke-width="12" fill="none" stroke-linecap="round"/>
+                        <path d="M210 160 C 350 70, 450 70, 590 160" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="1 8" opacity="0.5"/>
+                        <text x="100" y="200" font-family="Inter, sans-serif" font-size="24" fill="white" text-anchor="middle">АЗИЯ</text>
+                        <text x="700" y="200" font-family="Inter, sans-serif" font-size="24" fill="white" text-anchor="middle">ЕВРОПА</text>
+                    </svg>
+                </div>
                 <p class="text-2xl md:text-3xl font-light text-gray-200 mt-4 max-w-4xl">Это больше, чем инвестиция в SaaS-компанию. <br>Это шанс владеть фундаментальной инфраструктурой для более устойчивой, прозрачной и эффективной глобальной экономики.</p>
                 <div class="mt-12">
                      <h2 class="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">PartneX</h2>

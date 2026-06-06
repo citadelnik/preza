@@ -1,872 +1,310 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PartneX | Investor Pitch Deck</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            overflow: hidden;
-        }
-        
-        .slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .slide.active {
-            display: flex;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .glow {
-            box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(96, 165, 250, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(96, 165, 250, 0.6); }
-        }
-        
-        .float-animate {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        .stat-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.4);
-        }
-        
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #60a5fa 0%, #34d399 100%);
-            transition: width 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .nav-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .nav-dot.active {
-            width: 24px;
-            border-radius: 4px;
-            background: linear-gradient(90deg, #60a5fa 0%, #34d399 100%);
-        }
-        
-        .chart-bar {
-            transition: height 0.8s ease, background 0.3s ease;
-        }
-        
-        .feature-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover .feature-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-        
-        @keyframes draw-path {
-            to { stroke-dashoffset: 0; }
-        }
-        
-        .animate-draw {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: draw-path 2s ease forwards;
-        }
-        
-        @keyframes flow-asia-to-eu {
-            0% {
-                stroke-dashoffset: 1000;
-            }
-            100% {
-                stroke-dashoffset: 0;
-            }
-        }
-        
-        @keyframes flow-bidirectional {
-            0%, 100% {
-                stroke-dashoffset: 1000;
-            }
-            50% {
-                stroke-dashoffset: 0;
-            }
-        }
-        
-        .bridge-flow {
-            stroke-dasharray: 20 10;
-            animation: flow-asia-to-eu 3s ease-in-out infinite;
-        }
-        
-        .bridge-flow-both {
-            stroke-dasharray: 20 10;
-            animation: flow-bidirectional 4s ease-in-out infinite;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Взаємодія · Люба + Влада</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --beige:#EDE3D1;
+    --beige-deep:#E3D6BF;
+    --choc:#2A211B;
+    --choc-soft:#3A2D24;
+    --cream:#F4EDDF;
+    --orange:#E07B39;
+    --orange-soft:#E9A06A;
+    --muted:#9A8A75;
+    --muted-cream:#C9BCA6;
+    --green:#7FA05A;
+    --red:#C7654A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--beige);
+    color:var(--choc);
+    overflow:hidden;
+  }
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+  .slide{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:5vh 6vw;
+    opacity:0;pointer-events:none;
+    transform:translateY(18px);
+    transition:opacity .5s ease, transform .5s ease;
+  }
+  .slide.active{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .slide.active .reveal{animation:rise .6s cubic-bezier(.2,.7,.3,1) backwards;}
+  .reveal:nth-child(1){animation-delay:.05s;}
+  .reveal:nth-child(2){animation-delay:.15s;}
+  .reveal:nth-child(3){animation-delay:.25s;}
+  .reveal:nth-child(4){animation-delay:.35s;}
+  .reveal:nth-child(5){animation-delay:.45s;}
+  @keyframes rise{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+  .kicker{font-size:clamp(11px,1.1vw,15px);letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:1.6rem;}
+  h1{font-size:clamp(34px,6vw,82px);line-height:1.02;font-weight:800;letter-spacing:-.02em;text-align:center;max-width:16ch;}
+  h2{font-size:clamp(26px,4.4vw,58px);line-height:1.05;font-weight:800;letter-spacing:-.02em;text-align:center;max-width:18ch;margin-bottom:.4rem;}
+  .lead{font-size:clamp(16px,1.8vw,26px);line-height:1.45;color:var(--choc-soft);max-width:34ch;text-align:center;margin-top:1.6rem;font-weight:500;}
+  .accent{color:var(--orange);}
+  .full{max-width:1180px;width:100%;}
+
+  /* relay / journey */
+  .relay{display:flex;align-items:stretch;gap:0;width:100%;max-width:1100px;margin-top:1rem;}
+  .leg{flex:1;background:var(--choc);color:var(--cream);border-radius:26px;padding:2.4rem 2rem;position:relative;}
+  .leg.b{background:var(--choc-soft);}
+  .leg .who{font-size:clamp(13px,1.2vw,16px);letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:.5rem;}
+  .leg.a .who{color:var(--orange-soft);}
+  .leg.b .who{color:var(--orange-soft);}
+  .leg .title{font-size:clamp(20px,2.2vw,30px);font-weight:800;margin-bottom:1rem;line-height:1.1;}
+  .leg ul{list-style:none;}
+  .leg li{font-size:clamp(13px,1.3vw,18px);line-height:1.5;padding-left:1.4rem;position:relative;margin-bottom:.5rem;color:var(--muted-cream);}
+  .leg li:before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--orange);}
+  .handoff{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 .4rem;min-width:96px;}
+  .baton{font-size:clamp(28px,3vw,46px);}
+  .handoff .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);font-weight:800;text-align:center;margin-top:.6rem;line-height:1.3;}
+
+  /* leak */
+  .leak-row{display:flex;gap:1.4rem;width:100%;max-width:980px;margin-top:2rem;}
+  .leak{flex:1;background:var(--choc);color:var(--cream);border-radius:22px;padding:2rem 1.8rem;border-left:6px solid var(--red);}
+  .leak h3{font-size:clamp(18px,1.9vw,24px);font-weight:800;margin-bottom:.6rem;}
+  .leak p{font-size:clamp(13px,1.3vw,17px);color:var(--muted-cream);line-height:1.5;}
+  .flow{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:2.4rem;flex-wrap:wrap;}
+  .node{background:var(--beige-deep);border-radius:16px;padding:1rem 1.4rem;font-weight:800;font-size:clamp(15px,1.6vw,22px);}
+  .node.dim{opacity:.45;}
+  .arrow{font-size:clamp(20px,2vw,30px);color:var(--orange);}
+
+  /* north star */
+  .star{display:flex;flex-direction:column;align-items:center;}
+  .bignum{font-size:clamp(120px,22vw,300px);font-weight:800;line-height:.85;color:var(--orange);letter-spacing:-.04em;}
+  .bignum-sub{font-size:clamp(18px,2.4vw,34px);font-weight:700;margin-top:.4rem;letter-spacing:-.01em;}
+
+  /* split */
+  .split{display:flex;gap:1.6rem;width:100%;max-width:1080px;margin-top:1.2rem;position:relative;}
+  .col{flex:1;background:var(--choc);color:var(--cream);border-radius:24px;padding:2.2rem 1.9rem;}
+  .col .name{font-size:clamp(20px,2.3vw,30px);font-weight:800;}
+  .col .role{font-size:clamp(12px,1.1vw,15px);letter-spacing:.18em;text-transform:uppercase;color:var(--orange-soft);font-weight:700;margin:.3rem 0 1.2rem;}
+  .col .owns{font-size:clamp(13px,1.2vw,16px);color:var(--muted-cream);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.5rem;}
+  .col .metric{font-size:clamp(15px,1.5vw,21px);font-weight:700;line-height:1.4;}
+  .col .kpi{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid rgba(244,237,223,.16);}
+  .col .kpi span{display:block;font-size:clamp(13px,1.3vw,17px);color:var(--muted-cream);line-height:1.6;}
+  .col .kpi b{color:var(--cream);}
+  .divider{display:flex;align-items:center;justify-content:center;}
+  .pill{position:absolute;left:50%;top:-18px;transform:translateX(-50%);background:var(--orange);color:#fff;font-weight:800;font-size:clamp(11px,1vw,14px);letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.2rem;border-radius:40px;white-space:nowrap;box-shadow:0 8px 24px rgba(224,123,57,.4);}
+
+  /* standards */
+  .std-row{display:flex;gap:1.4rem;width:100%;max-width:1080px;margin-top:1.6rem;}
+  .std{flex:1;background:var(--choc);border-radius:22px;padding:2rem 1.6rem;color:var(--cream);}
+  .std .ico{font-size:clamp(30px,3.4vw,46px);margin-bottom:.7rem;}
+  .std h4{font-size:clamp(18px,2vw,26px);font-weight:800;margin-bottom:.5rem;}
+  .std .was{font-size:clamp(12px,1.1vw,14px);color:var(--red);font-weight:700;margin-bottom:.7rem;text-decoration:line-through;opacity:.7;}
+  .std p{font-size:clamp(13px,1.3vw,17px);color:var(--muted-cream);line-height:1.5;}
+
+  /* nav */
+  .nav{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:18px;z-index:50;}
+  .dot{width:9px;height:9px;border-radius:50%;background:rgba(42,33,27,.25);cursor:pointer;transition:all .3s;}
+  .dot.on{background:var(--orange);width:26px;border-radius:6px;}
+  .arrows{position:fixed;bottom:20px;right:26px;display:flex;gap:10px;z-index:50;}
+  .arrows button{width:46px;height:46px;border:none;border-radius:14px;background:var(--choc);color:var(--cream);font-size:20px;cursor:pointer;transition:transform .2s,background .2s;}
+  .arrows button:hover{background:var(--orange);transform:translateY(-2px);}
+  .counter{position:fixed;top:26px;right:30px;font-weight:800;font-size:14px;letter-spacing:.1em;color:var(--muted);z-index:50;}
+  .brand{position:fixed;top:26px;left:30px;font-weight:800;font-size:15px;letter-spacing:.04em;z-index:50;}
+  .brand b{color:var(--orange);}
+  .hint{position:fixed;bottom:26px;left:30px;font-size:12px;color:var(--muted);z-index:50;letter-spacing:.04em;}
+  @media(max-width:760px){
+    .relay,.split,.std-row,.leak-row{flex-direction:column;}
+    .handoff{flex-direction:row;padding:.8rem 0;}
+    .pill{position:static;transform:none;margin:0 auto;}
+  }
+</style>
 </head>
-<body class="bg-slate-900 text-white">
-    <div class="progress-bar" id="progressBar"></div>
-    
-    <main id="presentation-container" class="relative w-full h-screen flex flex-col items-center justify-center p-8">
-        <div class="slides-wrapper w-full max-w-7xl mx-auto flex-grow">
+<body>
+<div class="brand">ВЗАЄМОДІЯ <b>·</b> команда</div>
+<div class="counter"><span id="cur">1</span> / 7</div>
 
-            <!-- Slide 1: Hero -->
-            <div class="slide active flex-col justify-center items-center text-center gap-8">
-                <div class="float-animate">
-                    <h1 class="text-8xl md:text-9xl font-black gradient-text mb-4">PartneX</h1>
-                    <p class="text-2xl md:text-3xl text-slate-300 font-light">Операционная система для глобального производства</p>
-                </div>
-                
-                <div class="my-12 w-full max-w-5xl glass rounded-3xl p-12 glow">
-                    <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" class="w-full">
-                        <defs>
-                            <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#60a5fa" />
-                                <stop offset="100%" stop-color="#34d399" />
-                            </linearGradient>
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <circle cx="150" cy="150" r="80" fill="#1e293b" stroke="#60a5fa" stroke-width="3" filter="url(#glow)"/>
-                        <circle cx="850" cy="150" r="80" fill="#1e293b" stroke="#ef4444" stroke-width="3" filter="url(#glow)"/>
-                        <path d="M770 150 Q 500 50, 230 150" stroke="url(#bridgeGrad)" stroke-width="6" fill="none" class="bridge-flow-both"/>
-                        <text x="150" y="160" font-size="32" fill="white" text-anchor="middle" font-weight="bold">EU</text>
-                        <text x="850" y="160" font-size="32" fill="white" text-anchor="middle" font-weight="bold">КИТАЙ</text>
-                    </svg>
-                </div>
-                
-                <div class="flex gap-8 text-center">
-                    <div class="glass rounded-2xl px-8 py-6 pulse-glow">
-                        <p class="text-5xl font-bold gradient-text">€1B+</p>
-                        <p class="text-slate-400 mt-2">Размер рынка</p>
-                    </div>
-                    <div class="glass rounded-2xl px-8 py-6 pulse-glow">
-                        <p class="text-5xl font-bold gradient-text">84x</p>
-                        <p class="text-slate-400 mt-2">LTV/CAC</p>
-                    </div>
-                    <div class="glass rounded-2xl px-8 py-6 pulse-glow">
-                        <p class="text-5xl font-bold gradient-text">18 мес</p>
-                        <p class="text-slate-400 mt-2">Окно возможностей</p>
-                    </div>
-                </div>
-            </div>
+<div class="stage" id="stage">
 
-            <!-- Slide 2: Проблема -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center mb-8">
-                    Мы создаем чудеса <span class="gradient-text">XXI века</span><br>
-                    инструментами <span class="text-red-400">XX века</span>
-                </h2>
-                
-                <div class="grid grid-cols-2 gap-8 w-full max-w-6xl">
-                    <div class="glass rounded-3xl p-8 text-center stat-card">
-                        <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
-                            <svg class="w-20 h-20" fill="white" viewBox="0 0 20 20">
-                                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4">Нанометровая точность</h3>
-                        <p class="text-slate-300 text-lg">Компоненты с допусками ±0.001мм</p>
-                    </div>
-                    
-                    <div class="glass rounded-3xl p-8 text-center stat-card">
-                        <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500 to-orange-400 flex items-center justify-center">
-                            <svg class="w-20 h-20" fill="white" viewBox="0 0 20 20">
-                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4">Email & Excel</h3>
-                        <p class="text-slate-300 text-lg">Управление многомиллионными закупками</p>
-                    </div>
-                </div>
-                
-                <div class="glass rounded-3xl p-10 w-full max-w-4xl text-center mt-8 glow">
-                    <p class="text-4xl font-bold">
-                        <span class="text-red-400">70%</span> используют email • 
-                        <span class="text-red-400">52%</span> используют Excel
-                    </p>
-                    <p class="text-xl text-slate-400 mt-4">для многомиллионных закупок</p>
-                </div>
-            </div>
+  <!-- 1 -->
+  <section class="slide active">
+    <div class="kicker reveal">Зустріч команди</div>
+    <h1 class="reveal">Один клієнт.<br>Одна <span class="accent">команда</span>.</h1>
+    <p class="lead reveal">За кожною цифрою — людина в болю. Дружина лудомана о 2-й ночі. Мати, що втомилася рятувати. Наша робота — довести її до допомоги, а не загубити по дорозі.</p>
+  </section>
 
-            <!-- Slide 3: Масштаб проблемы -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center gradient-text mb-8">
-                    «Налог на неэффективность»
-                </h2>
-                
-                <div class="grid grid-cols-3 gap-8 w-full max-w-6xl mb-8">
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <p class="text-7xl font-black gradient-text mb-4">3-10</p>
-                        <p class="text-2xl font-semibold">недель</p>
-                        <p class="text-slate-400 mt-2">От запроса до заказа</p>
-                    </div>
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <p class="text-7xl font-black gradient-text mb-4">64%</p>
-                        <p class="text-2xl font-semibold">компаний</p>
-                        <p class="text-slate-400 mt-2">Без прозрачности</p>
-                    </div>
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <p class="text-7xl font-black gradient-text mb-4">€38k</p>
-                        <p class="text-2xl font-semibold">на выставку</p>
-                        <p class="text-slate-400 mt-2">С ROI &lt;1%</p>
-                    </div>
-                </div>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-5xl glow">
-                    <svg viewBox="0 0 800 200" class="w-full">
-                        <defs>
-                            <linearGradient id="lossGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#ef4444"/>
-                                <stop offset="100%" stop-color="#dc2626"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="50" y="50" width="700" height="100" fill="url(#lossGrad)" rx="10" opacity="0.3"/>
-                        <text x="400" y="110" font-size="48" fill="white" text-anchor="middle" font-weight="bold">€ МИЛЛИАРДЫ потерь ежегодно</text>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Slide 4: Макротренд -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center mb-8">
-                    Тектонический сдвиг<br>
-                    <span class="gradient-text">«Китай плюс один»</span>
-                </h2>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-5xl glow">
-                    <svg viewBox="0 0 1000 300" class="w-full">
-                        <defs>
-                            <linearGradient id="shiftGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#60a5fa"/>
-                                <stop offset="50%" stop-color="#fbbf24"/>
-                                <stop offset="100%" stop-color="#ef4444"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="200" cy="150" r="70" fill="#60a5fa" opacity="0.6"/>
-                        <text x="200" y="160" font-size="24" fill="white" text-anchor="middle" font-weight="bold">EU</text>
-                        <path d="M870 150 Q 500 50, 270 150" stroke="url(#shiftGrad)" stroke-width="8" fill="none" stroke-dasharray="10 5" class="bridge-flow-both"/>
-                        <circle cx="600" cy="150" r="60" fill="#fbbf24" opacity="0.6"/>
-                        <text x="600" y="160" font-size="20" fill="white" text-anchor="middle" font-weight="bold">ЮВА</text>
-                        <circle cx="800" cy="150" r="60" fill="#ef4444" opacity="0.6"/>
-                        <text x="800" y="160" font-size="20" fill="white" text-anchor="middle" font-weight="bold">КИТАЙ</text>
-                    </svg>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-8 w-full max-w-4xl mt-8">
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <p class="text-7xl font-black text-green-400 mb-4">67%</p>
-                        <p class="text-xl text-slate-300">немецких производителей диверсифицируют</p>
-                    </div>
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <p class="text-7xl font-black text-green-400 mb-4">+20%</p>
-                        <p class="text-xl text-slate-300">ПИИ в производство ЮВА</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 5: Решение -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-5xl font-bold text-center mb-4">
-                    Не еще один маркетплейс
-                </h2>
-                <h2 class="text-7xl font-black text-center gradient-text mb-12">
-                    Отраслевое облако
-                </h2>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-5xl glow">
-                    <div class="relative h-96 flex items-center justify-center">
-                        <div class="absolute w-64 h-64 rounded-full bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center z-10 pulse-glow">
-                            <span class="text-5xl font-black">PartneX</span>
-                        </div>
-                        
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 glass rounded-2xl p-6 feature-card">
-                            <svg class="w-16 h-16 mx-auto mb-2 feature-icon text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                            </svg>
-                            <p class="font-bold">AI подбор</p>
-                        </div>
-                        
-                        <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 glass rounded-2xl p-6 feature-card">
-                            <svg class="w-16 h-16 mx-auto mb-2 feature-icon text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                            <p class="font-bold">Доверие</p>
-                        </div>
-                        
-                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-12 glass rounded-2xl p-6 feature-card">
-                            <svg class="w-16 h-16 mx-auto mb-2 feature-icon text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            <p class="font-bold">Нормы ЕС</p>
-                        </div>
-                        
-                        <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 glass rounded-2xl p-6 feature-card">
-                            <svg class="w-16 h-16 mx-auto mb-2 feature-icon text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-                            </svg>
-                            <p class="font-bold">Коллаборация</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex gap-12 text-xl mt-8">
-                    <p><span class="font-bold text-blue-400">Veeva</span> для фармы</p>
-                    <p><span class="font-bold text-green-400">Knowde</span> для химии</p>
-                    <p><span class="font-bold gradient-text">PartneX</span> для производства</p>
-                </div>
-            </div>
-
-            <!-- Slide 6: Секретное оружие -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center mb-8">
-                    Наше секретное оружие<br>
-                    <span class="gradient-text">Протокол доверия $PRTNX</span>
-                </h2>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-5xl glow">
-                    <svg viewBox="0 0 800 400" class="w-full">
-                        <defs>
-                            <linearGradient id="tokenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#a855f7"/>
-                                <stop offset="100%" stop-color="#ec4899"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="400" cy="200" r="80" fill="url(#tokenGrad)" opacity="0.3"/>
-                        <circle cx="400" cy="200" r="60" fill="url(#tokenGrad)"/>
-                        <text x="400" y="210" font-size="28" fill="white" text-anchor="middle" font-weight="bold">$PRTNX</text>
-                        
-                        <circle cx="200" cy="100" r="40" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
-                        <text x="200" y="110" font-size="16" fill="white" text-anchor="middle">Покупатель</text>
-                        
-                        <circle cx="600" cy="100" r="40" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
-                        <text x="600" y="110" font-size="16" fill="white" text-anchor="middle">Поставщик</text>
-                        
-                        <circle cx="200" cy="300" r="40" fill="#1e293b" stroke="#a855f7" stroke-width="2"/>
-                        <text x="200" y="310" font-size="16" fill="white" text-anchor="middle">Стейкинг</text>
-                        
-                        <circle cx="600" cy="300" r="40" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
-                        <text x="600" y="310" font-size="16" fill="white" text-anchor="middle">Эскроу</text>
-                        
-                        <path d="M240 100 L360 180" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 5"/>
-                        <path d="M560 100 L440 180" stroke="#34d399" stroke-width="2" stroke-dasharray="5 5"/>
-                        <path d="M240 300 L360 220" stroke="#a855f7" stroke-width="2" stroke-dasharray="5 5"/>
-                        <path d="M560 300 L440 220" stroke="#ec4899" stroke-width="2" stroke-dasharray="5 5"/>
-                    </svg>
-                </div>
-                
-                <p class="text-3xl text-center max-w-4xl glass rounded-2xl p-8">
-                    <span class="font-bold gradient-text">Пользователи не просто клиенты</span><br>
-                    <span class="text-slate-300">Они становятся владельцами экосистемы</span>
-                </p>
-            </div>
-
-            <!-- Slide 7: Экономика -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center gradient-text mb-12">
-                    Экономика единорога
-                </h2>
-                
-                <div class="grid grid-cols-3 gap-8 w-full max-w-6xl mb-8">
-                    <div class="stat-card glass rounded-3xl p-10 text-center glow">
-                        <p class="text-8xl font-black gradient-text mb-4">84x</p>
-                        <p class="text-2xl font-bold">LTV/CAC</p>
-                        <p class="text-slate-400 mt-2">vs 5x стандарт</p>
-                    </div>
-                    <div class="stat-card glass rounded-3xl p-10 text-center glow">
-                        <p class="text-8xl font-black gradient-text mb-4">0.4</p>
-                        <p class="text-2xl font-bold">Месяцев</p>
-                        <p class="text-slate-400 mt-2">Срок окупаемости</p>
-                    </div>
-                    <div class="stat-card glass rounded-3xl p-10 text-center glow">
-                        <p class="text-8xl font-black gradient-text mb-4">96%</p>
-                        <p class="text-2xl font-bold">Маржа</p>
-                        <p class="text-slate-400 mt-2">Валовая прибыль</p>
-                    </div>
-                </div>
-                
-                <div class="glass rounded-3xl p-10 w-full max-w-5xl">
-                    <h3 class="text-3xl font-bold mb-8 text-center">Финансовые прогнозы</h3>
-                    <div class="flex justify-around items-end h-64">
-                        <div class="text-center">
-                            <div class="w-32 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-t-2xl chart-bar" style="height: 60px;"></div>
-                            <p class="text-3xl font-bold mt-4 gradient-text">€3.6M</p>
-                            <p class="text-slate-400">Год 1</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-32 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-t-2xl chart-bar" style="height: 140px;"></div>
-                            <p class="text-3xl font-bold mt-4 gradient-text">€14.5M</p>
-                            <p class="text-slate-400">Год 2</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-32 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-t-2xl chart-bar" style="height: 220px;"></div>
-                            <p class="text-3xl font-bold mt-4 gradient-text">€35M</p>
-                            <p class="text-slate-400">Год 3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 8: GTM стратегия -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center mb-8">
-                    Путь на рынок<br>
-                    <span class="gradient-text">Захват плацдарма DACH</span>
-                </h2>
-                
-                <div class="grid grid-cols-2 gap-8 w-full max-w-6xl">
-                    <div class="glass rounded-3xl p-10 glow">
-                        <h3 class="text-3xl font-bold mb-6 text-blue-400">Фаза 1: Плацдарм</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-2xl font-bold">1</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-xl">DACH регион</p>
-                                    <p class="text-slate-400">Самый требовательный рынок в мире</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-2xl font-bold">2</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-xl">ЧПУ обработка</p>
-                                    <p class="text-slate-400">Вертикаль с наибольшим спросом</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="glass rounded-3xl p-10 glow">
-                        <h3 class="text-3xl font-bold mb-6 text-green-400">Ключевое партнерство</h3>
-                        <div class="bg-gradient-to-br from-green-500 to-teal-400 rounded-2xl p-8 text-center mb-4">
-                            <p class="text-4xl font-black mb-2">VDW</p>
-                            <p class="text-lg">Ассоциация немецких станкостроителей</p>
-                        </div>
-                        <div class="space-y-2 text-lg">
-                            <p>✓ <span class="font-bold">150</span> компаний-членов</p>
-                            <p>✓ Прямой доступ к покупателям</p>
-                            <p>✓ Мгновенная легитимность</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="glass rounded-3xl p-8 w-full max-w-4xl text-center mt-4">
-                    <p class="text-3xl font-bold">
-                        Решает проблему <span class="gradient-text">«курицы и яйца»</span> с первого дня
-                    </p>
-                </div>
-            </div>
-
-            <!-- Slide 9: Команда -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center gradient-text mb-12">
-                    Команда мечты для гигантской задачи
-                </h2>
-                
-                <div class="grid grid-cols-3 gap-8 w-full max-w-6xl">
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                            <svg class="w-24 h-24" fill="white" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">CEO</h3>
-                        <p class="text-blue-400 font-semibold mb-4">Производственный эксперт</p>
-                        <p class="text-slate-400">15+ лет в немецкой индустрии</p>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                            <svg class="w-24 h-24" fill="white" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">CTO</h3>
-                        <p class="text-purple-400 font-semibold mb-4">Блокчейн архитектор</p>
-                        <p class="text-slate-400">Экзит €50M в Web3</p>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-3xl p-8 text-center">
-                        <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center">
-                            <svg class="w-24 h-24" fill="white" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">CPO</h3>
-                        <p class="text-pink-400 font-semibold mb-4">B2B SaaS ветеран</p>
-                        <p class="text-slate-400">Масштабировал 3 SaaS unicorns</p>
-                    </div>
-                </div>
-                
-                <div class="glass rounded-3xl p-8 w-full max-w-5xl">
-                    <h3 class="text-3xl font-bold text-center mb-6">Ключевые советники</h3>
-                    <div class="grid grid-cols-3 gap-6 text-center text-lg">
-                        <div>
-                            <p class="font-bold text-xl mb-2">Dr. Schmidt</p>
-                            <p class="text-blue-400">Экс-директор VDMA</p>
-                        </div>
-                        <div>
-                            <p class="font-bold text-xl mb-2">Sarah Chen</p>
-                            <p class="text-green-400">Эксперт по токеномике</p>
-                        </div>
-                        <div>
-                            <p class="font-bold text-xl mb-2">Marcus Weber</p>
-                            <p class="text-purple-400">SaaS экзит €200M</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 10: Запрос -->
-            <div class="slide flex-col justify-center items-center gap-8">
-                <h2 class="text-6xl font-bold text-center mb-8">
-                    <span class="gradient-text">The Ask</span>
-                </h2>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-4xl glow text-center">
-                    <p class="text-2xl text-slate-400 mb-4">Мы привлекаем</p>
-                    <p class="text-9xl font-black gradient-text mb-8">€500K</p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="bg-slate-800/50 rounded-2xl p-6">
-                            <p class="text-slate-400 mb-2">Инструмент</p>
-                            <p class="text-2xl font-bold">SAFE</p>
-                        </div>
-                        <div class="bg-slate-800/50 rounded-2xl p-6">
-                            <p class="text-slate-400 mb-2">Оценка</p>
-                            <p class="text-2xl font-bold">€4M pre-money</p>
-                        </div>
-                    </div>
-                    
-                    <div class="text-left space-y-4 bg-slate-800/50 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-4 text-center">Использование средств</h3>
-                        <div class="flex items-center gap-4">
-                            <div class="w-full bg-slate-700 rounded-full h-8 overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-500 to-cyan-400" style="width: 40%"></div>
-                            </div>
-                            <p class="text-xl font-bold w-32">40%</p>
-                            <p class="text-lg">Разработка</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-full bg-slate-700 rounded-full h-8 overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-green-500 to-teal-400" style="width: 30%"></div>
-                            </div>
-                            <p class="text-xl font-bold w-32">30%</p>
-                            <p class="text-lg">Supply side</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-full bg-slate-700 rounded-full h-8 overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-500 to-pink-400" style="width: 20%"></div>
-                            </div>
-                            <p class="text-xl font-bold w-32">20%</p>
-                            <p class="text-lg">GTM</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-full bg-slate-700 rounded-full h-8 overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-yellow-500 to-orange-400" style="width: 10%"></div>
-                            </div>
-                            <p class="text-xl font-bold w-32">10%</p>
-                            <p class="text-lg">Операционные</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 11: Инвестиционный тезис -->
-            <div class="slide flex-col justify-center items-center gap-6">
-                <h2 class="text-6xl font-bold text-center gradient-text mb-8">
-                    Почему инвестировать сейчас?
-                </h2>
-                
-                <div class="w-full max-w-5xl space-y-4">
-                    <div class="stat-card glass rounded-2xl p-6 flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold">1</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Огромный сломанный рынок</h3>
-                            <p class="text-xl text-slate-400">€1B+ рынок работает на инфраструктуре прошлого века</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-2xl p-6 flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-teal-400 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold">2</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Необратимый макротренд</h3>
-                            <p class="text-xl text-slate-400">«Китай плюс один» — возможность поколения с окном 18 месяцев</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-2xl p-6 flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold">3</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Проверенная бизнес-модель</h3>
-                            <p class="text-xl text-slate-400">Стратегия «Отраслевого облака» с LTV/CAC 84x</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-2xl p-6 flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-orange-400 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold">4</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Неприступный ров</h3>
-                            <p class="text-xl text-slate-400">Протокол на токенах создает сетевой эффект, который невозможно скопировать</p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card glass rounded-2xl p-6 flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-pink-400 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold">5</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-2">Путь к доминированию</h3>
-                            <p class="text-xl text-slate-400">Партнерство с VDW дает критическую массу с первого дня</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 12: Final Vision -->
-            <div class="slide flex-col justify-center items-center text-center gap-12">
-                <div class="float-animate">
-                    <h2 class="text-7xl font-black gradient-text mb-6">
-                        Давайте построим<br>будущее торговли
-                    </h2>
-                </div>
-                
-                <div class="glass rounded-3xl p-12 w-full max-w-5xl glow">
-                    <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" class="w-full">
-                        <defs>
-                            <linearGradient id="finalBridge" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#60a5fa"/>
-                                <stop offset="100%" stop-color="#34d399"/>
-                            </linearGradient>
-                            <filter id="finalGlow">
-                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <circle cx="150" cy="150" r="80" fill="#1e293b" stroke="#60a5fa" stroke-width="4" filter="url(#finalGlow)"/>
-                        <circle cx="850" cy="150" r="80" fill="#1e293b" stroke="#ef4444" stroke-width="4" filter="url(#finalGlow)"/>
-                        <path d="M770 150 Q 500 30, 230 150" stroke="url(#finalBridge)" stroke-width="10" fill="none" class="bridge-flow-both" filter="url(#finalGlow)"/>
-                        <text x="150" y="165" font-size="36" fill="white" text-anchor="middle" font-weight="bold">EU</text>
-                        <text x="850" y="165" font-size="36" fill="white" text-anchor="middle" font-weight="bold">КИТАЙ</text>
-                        <circle cx="500" cy="90" r="50" fill="url(#finalBridge)" filter="url(#finalGlow)"/>
-                        <text x="500" y="100" font-size="24" fill="white" text-anchor="middle" font-weight="bold">PartneX</text>
-                    </svg>
-                </div>
-                
-                <div class="space-y-6">
-                    <p class="text-3xl text-slate-300 max-w-4xl">
-                        Это не просто инвестиция в SaaS-компанию.<br>
-                        Это шанс владеть <span class="gradient-text font-bold">фундаментальной инфраструктурой</span><br>
-                        новой глобальной экономики.
-                    </p>
-                    
-                    <div class="glass rounded-2xl p-8 inline-block mt-8">
-                        <p class="text-xl text-slate-400 mb-4">Свяжитесь с нами</p>
-                        <p class="text-2xl font-bold">founders@partnex.io</p>
-                        <p class="text-xl text-slate-400 mt-2">Berlin • Taipei • Stuttgart</p>
-                    </div>
-                </div>
-            </div>
-
+  <!-- 2 -->
+  <section class="slide">
+    <div class="kicker reveal">Як це працює</div>
+    <h2 class="reveal">Це естафета, а не дві окремі роботи</h2>
+    <div class="full reveal">
+      <div class="relay">
+        <div class="leg a">
+          <div class="who">Люба · етап 1</div>
+          <div class="title">Перший контакт</div>
+          <ul>
+            <li>Ловить увагу контентом</li>
+            <li>Відповідає тепло й швидко в Direct</li>
+            <li>Розуміє, що людину турбує</li>
+            <li>Передає Владі з контекстом</li>
+          </ul>
         </div>
-    </main>
-
-    <!-- Навигация -->
-    <div class="fixed bottom-0 left-0 right-0 p-6 bg-slate-900/90 backdrop-blur-xl border-t border-white/10">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <div class="text-lg font-semibold">
-                    <span id="current-slide" class="gradient-text text-2xl">1</span>
-                    <span class="text-slate-500"> / </span>
-                    <span id="total-slides" class="text-slate-400">12</span>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-2">
-                <div id="slide-dots" class="flex gap-2"></div>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <button id="prev-btn" class="group px-6 py-3 glass rounded-xl hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
-                    <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <button id="next-btn" class="group px-6 py-3 glass rounded-xl hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
-                    <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="text-sm text-slate-400 font-semibold">
-                PartneX Pitch Deck 2025
-            </div>
+        <div class="handoff">
+          <div class="baton">🤝</div>
+          <div class="lbl">Тут вигравали<br>і програвали гонку</div>
         </div>
+        <div class="leg b">
+          <div class="who">Влада · етап 2</div>
+          <div class="title">Доведення до терапії</div>
+          <ul>
+            <li>Підхоплює одразу, не лишає чекати</li>
+            <li>Поглиблює — шукає реальний біль</li>
+            <li>Турбується про людину, не «продає»</li>
+            <li>Записує на діагностику до Тетяни</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <p class="lead reveal">Естафету виграють не на дистанції — а в зоні передачі палички.</p>
+  </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const slides = document.querySelectorAll('.slide');
-            const totalSlidesElem = document.getElementById('total-slides');
-            const currentSlideElem = document.getElementById('current-slide');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const progressBar = document.getElementById('progressBar');
-            const slideDotsContainer = document.getElementById('slide-dots');
-            
-            let currentSlide = 0;
-            const totalSlides = slides.length;
+  <!-- 3 -->
+  <section class="slide">
+    <div class="kicker reveal">Чесно про зараз</div>
+    <h2 class="reveal">Де ми втрачаємо людей</h2>
+    <div class="full reveal">
+      <div class="leak-row">
+        <div class="leak">
+          <h3>🕒 Холодна передача</h3>
+          <p>Людина написала — і чекає. Поки відповідь приходить, біль притих, страх повернувся, вона передумала. У болю не чекають довго.</p>
+        </div>
+        <div class="leak">
+          <h3>🎯 Не дістаємось до болю</h3>
+          <p>Розмова про «програму» замість розмови про людину. Не питаємо, що насправді болить — тож людина не відчуває, що її зрозуміли, і йде.</p>
+        </div>
+      </div>
+      <div class="flow reveal">
+        <div class="node">Контент</div><span class="arrow">→</span>
+        <div class="node">2–3 діалоги</div><span class="arrow">→</span>
+        <div class="node dim">майже 0 клієнтів</div>
+      </div>
+    </div>
+    <p class="lead reveal">Проблема не в людях. Проблема — у <span class="accent">зоні передачі</span>. Її ми й лагодимо разом.</p>
+  </section>
 
-            totalSlidesElem.textContent = totalSlides;
+  <!-- 4 -->
+  <section class="slide">
+    <div class="kicker reveal">Наша спільна ціль</div>
+    <div class="star reveal">
+      <div class="bignum">10</div>
+      <div class="bignum-sub">нових клієнтів у терапію — щомісяця</div>
+    </div>
+    <p class="lead reveal">Це не ціль Люби й не ціль Влади окремо. Ми <span class="accent">виграємо або програємо разом</span>. Найкращий контент нічого не вартий без теплого продажу. Найкращий продаж нічого не закриє без потоку людей.</p>
+  </section>
 
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'nav-dot';
-                dot.addEventListener('click', () => updateSlide(i));
-                slideDotsContainer.appendChild(dot);
-            }
+  <!-- 5 -->
+  <section class="slide">
+    <div class="kicker reveal">Справедливо й зрозуміло</div>
+    <h2 class="reveal">Хто за що відповідає</h2>
+    <div class="full reveal">
+      <div class="split">
+        <div class="pill">межа відповідальності</div>
+        <div class="col">
+          <div class="name">Люба</div>
+          <div class="role">Перший контакт</div>
+          <div class="owns">Її результат:</div>
+          <div class="metric">Кількість «теплих» діалогів, переданих Владі з контекстом про людину.</div>
+          <div class="kpi">
+            <span>Ціль зростання: <b>5 → 15 → 25</b> діалогів/міс</span>
+            <span>Відповідає за <b>потік і теплоту</b>, не за продаж.</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="col">
+          <div class="name">Влада</div>
+          <div class="role">Доведення до терапії</div>
+          <div class="owns">Її результат:</div>
+          <div class="metric">% переданих діалогів, що дійшли до діагностики й оплати.</div>
+          <div class="kpi">
+            <span>Ціль: діалог → діагностика <b>~50%</b>, → оплата <b>~45%</b></span>
+            <span>Відповідає за <b>якість роботи з людиною</b>, не за потік.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="lead reveal">Кожна відповідає за те, що <span class="accent">реально в її руках</span>. Ніхто не несе чужий провал.</p>
+  </section>
 
-            function updateSlide(newIndex) {
-                slides[currentSlide].classList.remove('active');
-                
-                currentSlide = newIndex;
-                slides[currentSlide].classList.add('active');
-                
-                currentSlideElem.textContent = currentSlide + 1;
-                
-                const progress = ((currentSlide + 1) / totalSlides) * 100;
-                progressBar.style.width = progress + '%';
-                
-                document.querySelectorAll('.nav-dot').forEach((dot, index) => {
-                    if (index === currentSlide) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-                
-                prevBtn.disabled = currentSlide === 0;
-                nextBtn.disabled = currentSlide === totalSlides - 1;
-            }
+  <!-- 6 -->
+  <section class="slide">
+    <div class="kicker reveal">Стандарт хорошої передачі</div>
+    <h2 class="reveal">Три правила, що рятують людину</h2>
+    <div class="full reveal">
+      <div class="std-row">
+        <div class="std">
+          <div class="ico">⚡</div>
+          <h4>Швидкість</h4>
+          <div class="was">людина чекає годинами</div>
+          <p>Перша відповідь — за 15 хвилин. У болю не чекають. Швидкість = «мене почули».</p>
+        </div>
+        <div class="std">
+          <div class="ico">💛</div>
+          <h4>Турбота</h4>
+          <div class="was">одразу про продукт</div>
+          <p>Спочатку людина, потім програма. Вона має відчути, що ми на її боці, а не продаємо.</p>
+        </div>
+        <div class="std">
+          <div class="ico">🔍</div>
+          <h4>Глибина</h4>
+          <div class="was">не питаємо про біль</div>
+          <p>3–4 питання про реальний біль до розмови про ціну. Хто не названий — той не вирішений.</p>
+        </div>
+      </div>
+    </div>
+    <p class="lead reveal">Це не «жорсткий продаж». Це <span class="accent">турбота, доведена до кінця</span>.</p>
+  </section>
 
-            function showNextSlide() {
-                if (currentSlide < totalSlides - 1) {
-                    updateSlide(currentSlide + 1);
-                }
-            }
+  <!-- 7 -->
+  <section class="slide">
+    <div class="kicker reveal">Заради чого</div>
+    <h1 class="reveal">Ми не «закриваємо ліди».<br>Ми <span class="accent">витягуємо людей</span>.</h1>
+    <p class="lead reveal">Кожен діалог, що не загубився, — це сім'я, яку ще можна врятувати. Люба її знаходить. Влада доводить до допомоги. Разом — 10 врятованих щомісяця.</p>
+  </section>
 
-            function showPrevSlide() {
-                if (currentSlide > 0) {
-                    updateSlide(currentSlide - 1);
-                }
-            }
-            
-            nextBtn.addEventListener('click', showNextSlide);
-            prevBtn.addEventListener('click', showPrevSlide);
-            
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    showNextSlide();
-                } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
-                    e.preventDefault();
-                    showPrevSlide();
-                }
-            });
+</div>
 
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            document.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            
-            document.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                if (touchEndX < touchStartX - 50) showNextSlide();
-                if (touchEndX > touchStartX + 50) showPrevSlide();
-            }
+<div class="nav" id="dots"></div>
+<div class="arrows">
+  <button onclick="go(-1)">‹</button>
+  <button onclick="go(1)">›</button>
+</div>
+<div class="hint">← → або клік для переходу</div>
 
-            updateSlide(0);
-        });
-    </script>
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const dotsWrap=document.getElementById('dots');
+  let i=0;
+  slides.forEach((_,n)=>{const d=document.createElement('div');d.className='dot'+(n===0?' on':'');d.onclick=()=>set(n);dotsWrap.appendChild(d);});
+  const dots=[...document.querySelectorAll('.dot')];
+  function set(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    dots.forEach((d,k)=>d.classList.toggle('on',k===i));
+    document.getElementById('cur').textContent=i+1;
+  }
+  function go(d){set(i+d);}
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' ')go(1);
+    if(e.key==='ArrowLeft')go(-1);
+  });
+  document.getElementById('stage').addEventListener('click',e=>{
+    if(e.target.closest('button')||e.target.closest('.dot'))return;
+    const mid=window.innerWidth/2;
+    go(e.clientX>mid?1:-1);
+  });
+</script>
 </body>
 </html>
